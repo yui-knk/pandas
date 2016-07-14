@@ -4089,6 +4089,7 @@ class TestRepr_timedelta64(tm.TestCase):
         delta_500ms = pd.to_timedelta(500, unit='ms')
 
         drepr = lambda x: x._repr_base()
+
         self.assertEqual(drepr(delta_1d), "1 days")
         self.assertEqual(drepr(-delta_1d), "-1 days")
         self.assertEqual(drepr(delta_0d), "0 days")
